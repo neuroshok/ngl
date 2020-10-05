@@ -1,0 +1,33 @@
+// self descriptor (ngl entity describe itself)
+ngl ngl
+{
+    environment
+
+    storage
+    data
+    entity
+    concept
+    shape
+}
+
+ngl data
+{
+    ngl:shape ngl:shape:ngl
+}
+
+ngl:environment computer
+{
+    ngl:entity os
+    {
+        console
+        {
+            input
+            ouput
+        }
+    }
+
+    ngl:storage
+    {
+        ram, hdd
+    }
+}

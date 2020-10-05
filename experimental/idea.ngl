@@ -1,0 +1,5 @@
+// finalisation
+an object is not considered constant during concretisation, after finalisation, the concretised object respect the constants rules
+
+
+

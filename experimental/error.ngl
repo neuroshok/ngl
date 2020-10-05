@@ -1,0 +1,26 @@
+ngl:function divide
+{
+    ngl:int <x>
+    ngl:int <y>
+
+    ngl:rule
+    {
+        y != 0
+    }
+
+    .result (x / y)
+}
+
+ngl:rule_broken<ngl:function:divide, (error)>
+
+ngl:function test
+{
+    ngl:int <x>
+    ngl:int <y>
+
+    tmp = divide<x, y>
+
+    tmp.retry<x, y + 1>
+
+    .result divide<x, y>
+}

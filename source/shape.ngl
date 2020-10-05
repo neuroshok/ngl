@@ -1,0 +1,25 @@
+ngl:shape letter
+{
+    ngc:range< a z >
+}
+
+ngl:shape digit
+{
+    ngc:range< 0 9 >
+}
+
+
+ngl:shape letter
+{
+
+}
+
+
+// intrinsic
+ngl:shape scalar_description
+{
+    ngc:sequence<ngl:shape:identifier ngl:shape:identifier>
+}
+
+aaaaaaaaaaaaaaaaaaaaaaaa
+seq<a, b> aa

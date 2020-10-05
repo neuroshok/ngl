@@ -1,0 +1,113 @@
+ngc:math integer
+{
+    ngl:rule
+    {
+        ngl:in_range<integer, -ngl:infinite, ngl:infinite>
+    }
+}
+
+ngc integer
+{
+    ngc:math:integer <value> = 0
+    ngl:uint <bits> = ngl:env:word_size
+
+    ngl:rule
+    {
+        ngl:in_range<integer, -2^(bits - 1), 2^(bits - 1) - 1>
+    }
+}
+
+ngc:integer int
+ngc:integer<?, 8> char
+
+ngc:math:sum
+{
+    ngc:number a
+    ngc:number b
+    ngc:number result
+}
+
+ngc:sum
+{
+    ngc:integer<32> a
+    ngc:integer<32> b
+    ngc:integer<32> result
+}
+
+ngl:shape<ngc:math:sum> == ngl:shape<ngc:sum>
+
+
+
+
+ngc:integer<4> quatre
+
+
+ngl:instruction add
+{
+    ngc:integer <op1>
+    ngc:integer <op2>
+    ngc:integer result
+
+    ngl:rule
+    {
+        op1.bits == op2.bits
+    }
+}
+
+ngl:function
+{
+    ngl:data input
+    ngl:data result
+}
+
+ngl:concept math
+
+ngc:math:add add
+{
+    ngc:integer op1
+    ngc:integer op2
+
+    .result = ngl:instruction:add<op1, op2>
+}
+
+
+template<class T>
+T add(T a, T b) {}
+
+
+template<>
+std::vector<int> add<std::vector<int>>(std::vector<int> a, std::vector<int> b)
+{
+    algo
+}
+
+
+ngl:concept:function add
+{
+    <ngl:data:concrete> data
+    data:concept <a>
+    data:concept <b>
+
+    data .result
+}
+
+ngl:concept:function:add<ngc:container:vector>
+{
+    .result (
+        algo...
+    )
+}
+
+ngl:concept:function:add<ngc:number>
+{
+    .result ngl:instruction:add<.a, .b>
+}
+
+
+ngc:sequence add
+ngl:function sum
+{
+    <[args]>
+}
+
+sum<[1 2 3 4]>:add<4>.result

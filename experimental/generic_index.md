@@ -1,0 +1,47 @@
+- grammar
+- keywords
+- evolution
+ - edition
+- interoperability
+ - FFI
+- execution
+ - branch
+  - pattern matching
+ - function
+ - instruction
+ - loop
+ - parallelism
+- environment
+- interaction
+ - I/O
+- constraint
+ - constness/mutability
+ - contracts
+- meta
+ - macro
+ - generics/template
+ - reflection
+- data
+ - variable
+ - type
+  - scalar
+  - vector
+   - array
+   - enum
+   - structure
+   - tuple
+- error system
+ - exception
+- memory system
+ - ownership
+- build system
+- documentation
+ - comment
+ - in source documentation
+- modularity
+ - library
+- analysis
+ - test
+ - benchmark
+ - profile
+ - proof
