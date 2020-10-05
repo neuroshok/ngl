@@ -1,0 +1,3 @@
+[submodule "ngl.compiler"]
+	path = ngl.compiler
+	url = https://github.com/neuroshok/ngl.compiler
