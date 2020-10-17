@@ -1,9 +1,5 @@
 # Neuroshok Generic Language
-ngl is compiled language focusing on generic code.
-
-- Describe generic concepts once
-- Filesystem abstraction
-- Graph oriented code architecture
+ngl is a description language focusing on genericity
 
 # Resources
-- Documentation : https://neuroshok.gitbook.io/ngl/
+- Documentation : https://ngl.neuroshok.com/doc
