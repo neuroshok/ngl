@@ -1,5 +1,5 @@
 site_name: Neuroshok Generic Language
-site_dir: /srv/web/dev
+site_dir: /srv/web/ngl/doc
 docs_dir: learn
 
 theme:
