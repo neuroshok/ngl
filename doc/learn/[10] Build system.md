@@ -17,7 +17,7 @@ ngl:phase build
 }
 ```
 
-# ncc/ngl:ecosystem:project
+## [10.2] Project
 
 ```
 ngl:ecosystem project
@@ -50,9 +50,9 @@ ngl:ecosystem project
 }
 ```
 
-# Example
+### Example
 
-## Raz
+### Raz
 
 `nc project config -link_type:static` // optional, default tpo static
 
