@@ -14,15 +14,28 @@ ngl ngl
 ### [3.2.1] Description
 
 **descriptor** : existing identifier
+**described_identifier** : new identifier
 
 #### self_description
 
 `ngl ngl`
 
+A self descriptor is an entity
+
 #### scalar_description
 
 `ngc number`
 
+#### post_description
+
+````
+ngc movie
+
+ngc:movie
+{
+    ngc:name
+}
+````
 
 #### vector_description
 
@@ -33,6 +46,10 @@ ngc movie
     ngc:name director
 }
 ```
+
+All described_identifiers in the bloc are connected to the described_identifier with an edge of type <has>
+
+`ngl:edge<ngl, ngc:movie, ngc:movie:name, has>`
 
 ### [3.2.2] Parameterization
 
@@ -89,6 +106,8 @@ ngc:project:project_zeta<config: release>
     ngl:data release_data
 }
 ```
+
+Append datas for the specified values to the parameterized_descriptor
 
 #### Concept shape
 

@@ -115,4 +115,63 @@ with multilines
 
 ## [4.5] Type
 
+### [4.5.1] Arrays
 
+````
+ngc:array<ngc:int> array [0 1 2 3]
+ngc:array<ngc:int> [array1 array2]
+
+ngc:int[0 1 2 3]
+ngc:bool[01001011010]
+ngc:hexa[FF00FF]
+````
+
+### [4.5.2] Enum
+
+An enum is an array of identifiers
+
+````
+ngc:array<ngl:identifier, 4> color_enum [red blue yellow]
+
+//
+
+// 3 identifiers from ngc:color
+ngc:color [red blue yellow]
+
+// loop on color identifiers
+ngl:loop<ngl:meta<ngc:color>.edges>
+{
+    // ngl:meta<red>.name
+    // ar<red> // ar expect ngc:int,  ngl:meta<red>.index
+}
+
+//
+
+// all fields required
+ngc <color>
+{
+    ngc:string name
+    ngc:hexa rgb
+}
+
+1/description/                   ngc:color<[Red], [FF0000]> red
+2/description, syntax2 /         ngc:color<> red{ [Red], [FF0000] }
+3/alias parameterization/        ngl:alias<red, ngc:color<[Red], [FF0000]>>
+4/alias description of concrete/ ngl:alias red ngc:color<[Red], [FF0000]>
+5/edge description of concrete/  ngl:edge<alias> red ngc:color<[Red], [FF0000]>
+
+ngc:color red
+{
+    .name [Red]
+    .rgb [FF0000]
+}
+
+ngc:color<.name [Red], .rgb [FF0000]> red
+ngc:color<.name [Blue], .rgb [0000FF]> blue
+
+// custom shape
+ngs:custom_color ngc:color
+{
+    red FF0000 [Red]
+}
+````
