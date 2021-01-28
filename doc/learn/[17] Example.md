@@ -68,3 +68,7 @@ ngc:controller<app:game>
 }
 
 ````
+
+## [17.4] Parallelism
+## [17.5] Executors
+## [17.6] GUI
