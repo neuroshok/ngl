@@ -107,6 +107,36 @@ ngc:project:project_zeta<config: release>
 }
 ```
 
+#### Meta parameterization
+
+A parameterized description can use partially parameterized identifiers
+
+````
+ngc array
+{
+    <ngc> type
+    ngc:integer <size>
+}
+
+ngc resizer
+{
+    ngc <data> // data is ngc:array<ngc:integer, ?>
+    
+    ngc:integer interal_size [12]
+    
+    ngl:meta<data>.parameterize<internal_size>
+}
+
+// parameter <size> missing
+ngc:resizer<ngc:array<ngc:integer, ?>>
+{
+    
+}
+
+ngc:resizer<ngc:array<ngc:integer>>
+
+````
+
 Append datas for the specified values to the parameterized_descriptor
 
 #### Concept shape
