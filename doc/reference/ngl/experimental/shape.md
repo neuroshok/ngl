@@ -186,3 +186,20 @@ concept add : addition_abstraite
 instruction add : addition concrete
 
 auto_concept<add>
+
+
+```
+ngs<html, 201>
+this
+is
+html
+code
+until 
+line specified
+in
+the
+shape
+
+ngc ngl_code
+
+````
