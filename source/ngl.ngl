@@ -3,6 +3,7 @@ ngl ngl
 {
     environment
 
+    rule
     storage
     data
     entity
@@ -10,9 +11,14 @@ ngl ngl
     shape
 }
 
-ngl data
+ngl:data
 {
     ngl:shape ngl:shape:ngl
+}
+
+ngl:shape
+{
+
 }
 
 ngl:environment computer

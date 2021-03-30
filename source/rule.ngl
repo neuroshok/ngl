@@ -1,0 +1,6 @@
+ngl:rule
+{
+    ngl:data <target>
+    ngl:rule parent
+    ngl:error_system:type type = terminate; // terminate, ignore
+}
