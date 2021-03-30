@@ -38,3 +38,20 @@ Nested parameterization is limited to one level.
     - **search** : 
     - **meta** : fiability quality 
     - **version**
+    
+
+## [3.1.1] Concretization process
+
+**Initial state**
+- Entity : **nc** (the ngl compiler)
+- Concrete data : the source code
+
+**Concretization**
+- read ngl.ngl (the self description of ngl)
+- process the ngl.ngl description
+    -  read the ngl:shape description
+    - ...
+- read the user source code
+- create the ngl program graph (source code internal representation)
+- process the meta code
+- concretize the program graph using the specified concretizer

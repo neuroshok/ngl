@@ -2,19 +2,32 @@
 
 ## [17.1] Hello world
 
+Create a project
+
+`nc project add hello_world`
+
 ```
-// ngl.ngl
+// generated tree
+hello_world/
+ - concept/ // project source code
+    - program.ngl // the main file containging the entry point of the program
 
-// shape.ngl
+ - ngl.ngl // description of ngl itself
+ - project.ngl // description of the project
+```
 
-nc project add hello_world
+```
+// project.ngl
+ngl::io = [ngl::console] // ngl default write to console
+```
 
-// hello_world.ngl
-ngl:cluster:use<io>
+```
+// program.ngl
+// ngl:cluster:use<io> // only required on conflicts
 
 ngc:program
 {
-    ngc:print<[Hello world]>
+    ngc:write<[Hello world]>
 }
 
 

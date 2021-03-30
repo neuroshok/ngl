@@ -1,5 +1,23 @@
 # Meta
 
+## [8.1] Parameterization
+
+## [8.1.1] Parameter name resolution
+```
+ngl reader
+{
+    ngc:string <data>
+    ngl:data mode
+    
+    ngc [text binary]
+}
+
+ngl:data str_data
+ngl:reader<str_data, binary> // binary not found, search for ngl:reader:binary
+```
+
+## [8.2] Reflection
+
 ngl:meta is used to manipulate an concrete identifier as a concept  
 
 ```

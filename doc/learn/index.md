@@ -24,6 +24,6 @@ ngl is a language using uncommon concepts, to understand them, please read the [
 
 # Links
 
-- [**github**](https://github.com/ads00/ngl)
-- [**Language reference**]()
+- [**github**](https://github.com/neuroshok/ngl)
+- [**Language reference**](https://github.com/neuroshok/ngl/blob/master/doc/reference/index.md)
 - [**Neuroshok Concept Cluster**]()
